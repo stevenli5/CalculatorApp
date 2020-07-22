@@ -29,8 +29,8 @@ Actual Result:
 Expected Result: 362880.0  
 Actual Result:  
 
-3. Determine the result of sin(-4).  
-Expected Result: 0.756802495 (...)  
+3. Determine the result of sin(4).  
+Expected Result: -0.756802495 (...)  
 Actual Result:  
 
 4. Determine the result of 99 / 0.  
