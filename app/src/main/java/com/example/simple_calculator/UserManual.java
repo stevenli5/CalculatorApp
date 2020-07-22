@@ -30,7 +30,5 @@ public class UserManual extends AppCompatActivity {
                 openCalculator();
             }
         });
-
-
     }
 }
