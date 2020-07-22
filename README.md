@@ -1,7 +1,7 @@
 # Calculator App
 
 #### Description
-A calculator app designed and programmed in Android Studio, as part of assignment 5 for the SEG2105 course at the University of Ottawa.
+A calculator app designed and programmed in Android Studio, as part of assignment 5 for the SEG2105 course at the University of Ottawa.  
 This calculator contains many new implementations compared to the initially commited version.
 
 #### Key Additions/Changes
@@ -23,23 +23,23 @@ This calculator contains many new implementations compared to the initially comm
 
 1. Determine the log of 10.  
 Expected Result: 1.0  
-Actual Result:  
+Actual Result: 1.0
 
 2. Determine the factorial of 9.  
 Expected Result: 362880.0  
-Actual Result:  
+Actual Result: 362880.0
 
 3. Determine the result of sin(4).  
-Expected Result: -0.756802495 (...)  
-Actual Result:  
+Expected Result: -0.7568024953079282
+Actual Result: -0.7568024953079282
 
 4. Determine the result of 99 / 0.  
 Expected Result: Error 1  
-Actual Result:  
+Actual Result: Error 1
 
 5. Clear the Screen and Enable Dark Mode.  
-Expected Result:  
-Actual Result:  
+Expected Result and Actual Result:  
+![image](https://user-images.githubusercontent.com/60322211/88239628-ecc5ec00-cc52-11ea-9a1d-e12ece1b180b.png)
 
 ### Future Implementations
 
