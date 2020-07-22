@@ -329,25 +329,29 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 val2 = Float.parseFloat(edttxt.getText() + "");
-                // temporary code below for testing - use switch(sign) later
-                if (sym == "+") {
-                    edttxt.setText(val1+val2 + "");
+                if (sym == null) {
+                    edttxt.setText(edttxt.getText());
+                } else {
+                    switch (sym) {
+                        case "+":
+                            edttxt.setText(val1 + val2 + "");
+                            break;
+                        case "-":
+                            edttxt.setText(val1 - val2 + "");
+                            break;
+                        case "x":
+                            edttxt.setText(val1 * val2 + "");
+                            break;
+                        case "÷":
+                            edttxt.setText(val1 / val2 + "");
+                            break;
+                    }
                 }
-                if (sym == "-") {
-                    edttxt.setText(val1-val2 + "");
-                }
-                if (sym == "x") {
-                    edttxt.setText(val1*val2 + "");
-                }
-                if (sym == "÷") {
-                    edttxt.setText(val1/val2 + "");
-                }
-                // after equals, must reset the display afterwards
 
-                // temporary:
-                if (sym == "yˣ") {
-                    edttxt.setText(Math.pow(val1, val2) + "");
-                }
+//                // temporary:
+//                if (sym == "yˣ") {
+//                    edttxt.setText(Math.pow(val1, val2) + "");
+//                }
             }
         });
 

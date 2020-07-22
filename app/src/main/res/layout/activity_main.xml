@@ -168,6 +168,22 @@
         android:textSize="30sp" />
 
     <Button
+        android:id="@+id/btn_pi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="542dp"
+        android:background="@drawable/default_btn_bg"
+        android:text="𝛑"
+        android:textColor="@color/mainBackground"
+        android:textSize="30sp" />
+
+    <Button
         android:id="@+id/btn_sin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -319,16 +335,16 @@
 
     <Button
         android:id="@+id/btn_cls"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
+        android:layout_width="61dp"
+        android:layout_height="61dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
         android:layout_marginStart="318dp"
         android:layout_marginLeft="318dp"
-        android:layout_marginTop="170dp"
-        android:background="@drawable/default_btn_bg"
+        android:layout_marginTop="164dp"
+        android:background="@drawable/clear_btn"
         android:text="C"
         android:textColor="@color/mainBackground"
         android:textSize="30sp" />
@@ -420,14 +436,14 @@
 
     <Button
         android:id="@+id/btn_equ"
-        android:layout_width="379dp"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="18dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginLeft="115dp"
         android:layout_marginTop="542dp"
         android:background="@drawable/default_btn_bg"
         android:text="="
@@ -467,6 +483,7 @@
         android:background="@drawable/border"
         android:gravity="center|end"
         android:maxLength="10"
+        android:text=" "
         android:textColor="@color/mainText"
         android:textSize="52sp"
         android:textStyle="bold" />
