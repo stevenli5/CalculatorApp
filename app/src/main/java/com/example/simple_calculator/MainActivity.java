@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
+//a
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -285,6 +285,29 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        buttonSqrt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sym = "√"; // set the case to sqrt
+                symView.setText("√");
+                val1 = Float.parseFloat(edttxt.getText() + "");
+                dec = false; // reset decimal boolean to false
+                edttxt.setText(Math.sqrt(val1) + "");
+                sym = null;
+            }
+        });
+
+        buttonExp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sym = "yˣ"; // set the case to exponent
+                symView.setText("yˣ");
+                val1 = Float.parseFloat(edttxt.getText() + "");
+                dec = false; // reset decimal boolean to false
+                edttxt.setText(null);
+            }
+        });
+
         buttonEqu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -303,6 +326,11 @@ public class MainActivity extends AppCompatActivity {
                     edttxt.setText(val1/val2 + "");
                 }
                 // after equals, must reset the display afterwards
+
+                // temporary:
+                if (sym == "yˣ") {
+                    edttxt.setText(Math.pow(val1, val2) + "");
+                }
             }
         });
 

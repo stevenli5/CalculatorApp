@@ -280,7 +280,7 @@
         android:layout_marginLeft="318dp"
         android:layout_marginTop="234dp"
         android:background="@drawable/default_btn_bg"
-        android:text="xⁿ"
+        android:text="yˣ"
         android:textAllCaps="false"
         android:textColor="@color/mainBackground"
         android:textSize="30sp" />
