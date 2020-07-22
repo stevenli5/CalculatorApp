@@ -255,8 +255,32 @@ public class MainActivity extends AppCompatActivity {
                 sym = "tan"; // set the case to sin
                 symView.setText("tan");
                 val1 = Float.parseFloat(edttxt.getText() + "");
-                dec = false; // reset decimal boolean to false as we have a new number, val2
+                dec = false; // reset decimal boolean to false
                 edttxt.setText(Math.tan(val1) + "");
+                sym = null;
+            }
+        });
+
+        buttonLog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sym = "log"; // set the case to log
+                symView.setText("log");
+                val1 = Float.parseFloat(edttxt.getText() + "");
+                dec = false; // reset decimal boolean to false
+                edttxt.setText(Math.log10(val1) + "");
+                sym = null;
+            }
+        });
+
+        buttonLn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sym = "ln"; // set the case to ln
+                symView.setText("ln");
+                val1 = Float.parseFloat(edttxt.getText() + "");
+                dec = false; // reset decimal boolean to false
+                edttxt.setText(Math.log(val1) + "");
                 sym = null;
             }
         });
