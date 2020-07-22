@@ -1,22 +1,26 @@
 package com.example.simple_calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonCls, buttonDec, buttonAdd, buttonSub, buttonMul, buttonDiv, buttonEqu;
-    TextView edttxt;
+    Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonCls, buttonDec, buttonAdd, buttonSub, buttonMul, buttonDiv, buttonEqu, buttonDark;
+    TextView edttxt, symView; // symView added for display
+    String sym; // to display the sign AND to determine the sign to calculate
     float val1, val2;
-    boolean add, sub, mul, div;
+    boolean add, sub, mul, div, dec; // adding more functionality for decimals
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        dec = false;
 
         button0 = (Button) findViewById(R.id.btn0);
         button1 = (Button) findViewById(R.id.btn1);
@@ -30,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         button9 = (Button) findViewById(R.id.btn9);
 
         edttxt = (TextView) findViewById(R.id.screen);
+        symView = (TextView) findViewById(R.id.symbol);
 
         buttonCls = (Button) findViewById(R.id.btn_cls);
         buttonDec = (Button) findViewById(R.id.btn_dec);
@@ -38,6 +43,34 @@ public class MainActivity extends AppCompatActivity {
         buttonMul = (Button) findViewById(R.id.btn_mul);
         buttonDiv = (Button) findViewById(R.id.btn_div);
         buttonEqu = (Button) findViewById(R.id.btn_equ);
+        buttonDark = (Button) findViewById(R.id.btn_dark);
+
+        SharedPreferences appMode = getSharedPreferences("AppSettingPrefs", 0); //default app mode
+        final boolean isNightModeOn = appMode.getBoolean("NightMode", false); //default light mode
+        final SharedPreferences.Editor appEdit = appMode.edit();
+
+        if(isNightModeOn) { // not compatible with landscape mode, therefore app is kept in portrait mode
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            buttonDark.setText("Clear and Disable Dark Mode"); // changing the text of Enable/Disable Dark Mode
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            buttonDark.setText("Clear and Enable Dark Mode"); // changing the text of Enable/Disable Dark Mode
+        }
+
+        buttonDark.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { // simple onClickListener to determine if the button has been clicked, like in previous project
+                if (isNightModeOn) {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    appEdit.putBoolean("NightMode", false);
+                    appEdit.apply(); // apply the edits
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    appEdit.putBoolean("NightMode", true);
+                    appEdit.apply(); // apply the edits
+                }
+            }
+        });
 
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,13 +154,25 @@ public class MainActivity extends AppCompatActivity {
         buttonDec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edttxt.setText(edttxt.getText() + ".");
+                if (dec) { // if there is already a decimal then continue on, user mistake
+                    edttxt.setText(edttxt.getText());
+                    dec = true;
+                } else if (!dec) { // else, we see if there is input from the user already
+                    if (edttxt.getText().equals("")) {
+                        edttxt.setText("0." + ""); // by default, a null edttxt means the user wants "0."
+                    } else {
+                        edttxt.setText(edttxt.getText() + "."); // else, we add a decimal
+                    }
+                    dec = true;
+                }
             }
         });
 
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                sym = "+";
+                symView.setText("+");
                 add = true;
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 edttxt.setText(null);
@@ -165,7 +210,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 val2 = Float.parseFloat(edttxt.getText() + "");
-                if (val2 == 0.0) {
+                if ((val2 == 0.0) && (div == true)) {
                     edttxt.setText("Error" + "");
                 }
                 if (mul == true) {
@@ -186,5 +231,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+
     }
 }
