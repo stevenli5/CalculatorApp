@@ -308,6 +308,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        buttonFac.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sym = "!"; // set the case to factorial
+                symView.setText("!");
+                val1 = Float.parseFloat(edttxt.getText() + "");
+                float i = (int)val1 - 1;
+                while (i > 0) {
+                    val1 = val1 * i;
+                    i--;
+                } // after this while loop we have successfully "factorialized" the number
+                dec = false; // reset decimal boolean to false
+                edttxt.setText(val1 + "");
+                sym = null;
+            }
+        });
+
         buttonEqu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
