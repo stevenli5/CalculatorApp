@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonCls, buttonDec, buttonAdd, buttonSub, buttonMul, buttonDiv, buttonEqu, buttonDark,
-            buttonSin, buttonCos, buttonTan, buttonBack, buttonLog, buttonLn, buttonSqrt, buttonExp, buttonFac;
+            buttonSin, buttonCos, buttonTan, buttonLog, buttonLn, buttonSqrt, buttonExp, buttonFac, buttonMan;
     TextView edttxt, symView; // symView added for display
     String sym; // to display the sign AND to determine the sign to calculate
     float val1, val2;
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         buttonSin = (Button) findViewById(R.id.btn_sin);
         buttonCos = (Button) findViewById(R.id.btn_cos);
         buttonTan = (Button) findViewById(R.id.btn_tan);
-        buttonBack = (Button) findViewById(R.id.btn_back);
+        buttonMan = (Button) findViewById(R.id.btn_man);
         buttonLog = (Button) findViewById(R.id.btn_log);
         buttonLn = (Button) findViewById(R.id.btn_ln);
         buttonSqrt = (Button) findViewById(R.id.btn_sqt);
@@ -155,9 +155,12 @@ public class MainActivity extends AppCompatActivity {
         buttonCls.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                sym = null;
                 edttxt.setText("");
+                symView.setText("");
                 val1 = 0;
                 val2 = 0;
+                dec = false;
             }
         });
 
@@ -219,6 +222,19 @@ public class MainActivity extends AppCompatActivity {
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 edttxt.setText(null);
                 dec = false; // reset decimal boolean to false as we have a new number, val2
+            }
+        });
+
+        buttonSin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sym = "sin"; // set the case to sin
+                symView.setText("sin");
+                val1 = Float.parseFloat(edttxt.getText() + "");
+//                edttxt.setText(null);
+                dec = false; // reset decimal boolean to false as we have a new number, val2
+                edttxt.setText(Math.sin(val1) + "");
+                sym = null;
             }
         });
 

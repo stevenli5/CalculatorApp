@@ -302,7 +302,7 @@
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/btn_back"
+        android:id="@+id/btn_man"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -310,12 +310,12 @@
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
         android:layout_marginStart="304dp"
-        android:layout_marginLeft="318dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginLeft="304dp"
+        android:layout_marginTop="14dp"
         android:background="@drawable/default_btn_bg"
-        android:text="BACK"
+        android:text="Manual"
         android:textColor="@color/mainBackground"
-        android:textSize="24sp" />
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/btn_cls"
@@ -325,9 +325,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="325dp"
-        android:layout_marginLeft="325dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginStart="318dp"
+        android:layout_marginLeft="318dp"
+        android:layout_marginTop="170dp"
         android:background="@drawable/default_btn_bg"
         android:text="C"
         android:textColor="@color/mainBackground"
@@ -467,7 +467,6 @@
         android:background="@drawable/border"
         android:gravity="center|end"
         android:maxLength="10"
-        android:text="0123456789"
         android:textColor="@color/mainText"
         android:textSize="52sp"
         android:textStyle="bold" />
@@ -485,7 +484,7 @@
         android:background="@drawable/border"
         android:gravity="center"
         android:textColor="@color/mainText"
-        android:textSize="40dp" />
+        android:textSize="38dp" />
 
     <!--        android:text=""-->
     app:layout_constraintBottom_toBottomOf="parent"
