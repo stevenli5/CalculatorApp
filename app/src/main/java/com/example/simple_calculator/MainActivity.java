@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     TextView edttxt, symView; // symView added for display
     String sym; // to display the sign AND to determine the sign to calculate
     float val1, val2;
-    boolean add, sub, mul, div, dec; // adding more functionality for decimals
+    boolean dec; // adding more functionality for decimals
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -171,18 +171,17 @@ public class MainActivity extends AppCompatActivity {
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sym = "+";
-                symView.setText("+");
-                add = true;
+                sym = "+"; // set the case the addition
+                symView.setText(sym);
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 edttxt.setText(null);
+                dec = false; // reset decimal boolean to false as we have a new number, val2
             }
         });
 
         buttonSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sub = true;
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 edttxt.setText(null);
             }
@@ -191,7 +190,6 @@ public class MainActivity extends AppCompatActivity {
         buttonMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mul = true;
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 edttxt.setText(null);
             }
@@ -200,7 +198,6 @@ public class MainActivity extends AppCompatActivity {
         buttonDiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                div = true;
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 edttxt.setText(null);
             }
@@ -210,25 +207,28 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 val2 = Float.parseFloat(edttxt.getText() + "");
-                if ((val2 == 0.0) && (div == true)) {
-                    edttxt.setText("Error" + "");
+                if (sym == "+") {
+                    edttxt.setText(val1+val2 + "");
                 }
-                if (mul == true) {
-                    edttxt.setText(val1 * val2 + "");
-                    mul = false;
-                }
-                if (div == true) {
-                    edttxt.setText(val1 / val2 + "");
-                    div = false;
-                }
-                if (add == true) {
-                    edttxt.setText(val1 + val2 + "");
-                    add = false;
-                }
-                if (sub == true) {
-                    edttxt.setText(val1 - val2 + "");
-                    sub = false;
-                }
+//                if ((val2 == 0.0) && (div == true)) {
+//                    edttxt.setText("Error" + "");
+//                }
+//                if (mul == true) {
+//                    edttxt.setText(val1 * val2 + "");
+//                    mul = false;
+//                }
+//                if (div == true) {
+//                    edttxt.setText(val1 / val2 + "");
+//                    div = false;
+//                }
+//                if (add == true) {
+//                    edttxt.setText(val1 + val2 + "");
+//                    add = false;
+//                }
+//                if (sub == true) {
+//                    edttxt.setText(val1 - val2 + "");
+//                    sub = false;
+//                }
             }
         });
 
