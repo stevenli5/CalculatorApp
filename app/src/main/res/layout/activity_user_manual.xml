@@ -206,7 +206,7 @@
         android:layout_marginLeft="38dp"
         android:layout_marginTop="326dp"
         android:layout_marginEnd="7dp"
-        android:text="The pi (𝛑) button should be not be combined with another number before an operation."
+        android:text="The pi (𝛑) button cannot be combined with another number before an operation. For negative 𝛑, press 𝛑 first."
         android:textColor="@color/mainText"
         android:textSize="20sp" />
 

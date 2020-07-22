@@ -185,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
-                edttxt.setText("3.14159265"); // to 10 digits, as the display only supports up to 10 digits
+                edttxt.setText("3.1415926535897932384626433832795028842"); // to 39 digits, as the display only supports up to 40 digits
             }
         }));
 
