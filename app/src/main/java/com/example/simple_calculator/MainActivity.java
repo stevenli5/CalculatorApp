@@ -353,6 +353,10 @@ public class MainActivity extends AppCompatActivity {
                 val2 = Float.parseFloat(edttxt.getText() + "");
                 if (sym == null) {
                     edttxt.setText(edttxt.getText());
+                } else if (sym == "÷") {
+                    if (val2 == 0.0) {
+                        edttxt.setText("Error 1");
+                    }
                 } else {
                     switch (sym) {
                         case "+":
@@ -374,14 +378,7 @@ public class MainActivity extends AppCompatActivity {
                             break;
                     }
                 }
-
-//                // temporary:
-//                if (sym == "yˣ") {
-//                    edttxt.setText(Math.pow(val1, val2) + "");
-//                }
             }
         });
-
-
     }
 }

@@ -168,7 +168,7 @@
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/btn_pi"
+        android:id="@+id/btn_neg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -179,7 +179,7 @@
         android:layout_marginLeft="18dp"
         android:layout_marginTop="542dp"
         android:background="@drawable/default_btn_bg"
-        android:text="𝛑"
+        android:text="( - )"
         android:textColor="@color/mainBackground"
         android:textSize="30sp" />
 
@@ -236,7 +236,7 @@
 
     <Button
         android:id="@+id/btn_log"
-        android:layout_width="wrap_content"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
@@ -253,14 +253,14 @@
 
     <Button
         android:id="@+id/btn_ln"
-        android:layout_width="wrap_content"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="114dp"
-        android:layout_marginLeft="118dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginLeft="95dp"
         android:layout_marginTop="234dp"
         android:background="@drawable/default_btn_bg"
         android:text="ln"
@@ -270,14 +270,14 @@
 
     <Button
         android:id="@+id/btn_sqt"
-        android:layout_width="wrap_content"
+        android:layout_width="69dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="209dp"
-        android:layout_marginLeft="218dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="173dp"
+        android:layout_marginLeft="173dp"
         android:layout_marginTop="234dp"
         android:background="@drawable/default_btn_bg"
         android:text="√"
@@ -286,17 +286,34 @@
 
     <Button
         android:id="@+id/btn_exp"
-        android:layout_width="wrap_content"
+        android:layout_width="67dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="304dp"
-        android:layout_marginLeft="318dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginLeft="250dp"
         android:layout_marginTop="234dp"
         android:background="@drawable/default_btn_bg"
         android:text="yˣ"
+        android:textAllCaps="false"
+        android:textColor="@color/mainBackground"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btn_pi"
+        android:layout_width="67dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="325dp"
+        android:layout_marginLeft="325dp"
+        android:layout_marginTop="234dp"
+        android:background="@drawable/default_btn_bg"
+        android:text="𝛑"
         android:textAllCaps="false"
         android:textColor="@color/mainBackground"
         android:textSize="30sp" />
