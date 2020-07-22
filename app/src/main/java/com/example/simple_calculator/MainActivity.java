@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     String sym; // to display the sign AND to determine the sign to calculate
     float val1, val2;
     boolean dec; // adding more functionality for decimals
+    boolean neg;
 
     public void openManual() {
         Intent intent = new Intent(this, UserManual.class);
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         dec = false;
+        neg = false;
 
         button0 = (Button) findViewById(R.id.btn0);
         button1 = (Button) findViewById(R.id.btn1);
@@ -184,6 +186,7 @@ public class MainActivity extends AppCompatActivity {
                 val1 = 0;
                 val2 = 0;
                 dec = false;
+                neg = false; // reset negative to false
             }
         });
 
@@ -204,6 +207,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        buttonNeg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!neg) {
+                    String a = (String) edttxt.getText();
+                    String b = a.replaceAll(" ", "");
+                    edttxt.setText("-" + b);
+                    neg = true;
+                } else {
+                    edttxt.setText(edttxt.getText());
+                }
+            }
+        });
+
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -212,6 +229,7 @@ public class MainActivity extends AppCompatActivity {
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 edttxt.setText(null);
                 dec = false; // reset decimal boolean to false as we have a new number, val2
+                neg = false; // reset negative to false
             }
         });
 
@@ -223,6 +241,7 @@ public class MainActivity extends AppCompatActivity {
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 edttxt.setText(null);
                 dec = false; // reset decimal boolean to false as we have a new number, val2
+                neg = false; // reset negative to false
             }
         });
 
@@ -234,17 +253,19 @@ public class MainActivity extends AppCompatActivity {
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 edttxt.setText(null);
                 dec = false; // reset decimal boolean to false as we have a new number, val2
+                neg = false; // reset negative to false
             }
         });
 
         buttonDiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sym = "÷"; // set the case to division
+                sym = "/"; // set the case to division
                 symView.setText("÷");
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 edttxt.setText(null);
                 dec = false; // reset decimal boolean to false as we have a new number, val2
+                neg = false; // reset negative to false
             }
         });
 
@@ -257,6 +278,7 @@ public class MainActivity extends AppCompatActivity {
                 dec = false; // reset decimal boolean to false
                 edttxt.setText(Math.sin(val1) + "");
                 sym = null;
+                neg = false; // reset negative to false
             }
         });
 
@@ -269,6 +291,7 @@ public class MainActivity extends AppCompatActivity {
                 dec = false; // reset decimal boolean to false
                 edttxt.setText(Math.cos(val1) + "");
                 sym = null;
+                neg = false; // reset negative to false
             }
         });
 
@@ -281,30 +304,41 @@ public class MainActivity extends AppCompatActivity {
                 dec = false; // reset decimal boolean to false
                 edttxt.setText(Math.tan(val1) + "");
                 sym = null;
+                neg = false; // reset negative to false
             }
         });
 
         buttonLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sym = "log"; // set the case to log
-                symView.setText("log");
-                val1 = Float.parseFloat(edttxt.getText() + "");
-                dec = false; // reset decimal boolean to false
-                edttxt.setText(Math.log10(val1) + "");
-                sym = null;
+                if (neg) {
+                    edttxt.setText("Error 2");
+                } else {
+                    sym = "log"; // set the case to log
+                    symView.setText("log");
+                    val1 = Float.parseFloat(edttxt.getText() + "");
+                    dec = false; // reset decimal boolean to false
+                    edttxt.setText(Math.log10(val1) + "");
+                    sym = null;
+                    neg = false; // reset negative to false
+                }
             }
         });
 
         buttonLn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sym = "ln"; // set the case to ln
-                symView.setText("ln");
-                val1 = Float.parseFloat(edttxt.getText() + "");
-                dec = false; // reset decimal boolean to false
-                edttxt.setText(Math.log(val1) + "");
-                sym = null;
+                if (neg) {
+                    edttxt.setText("Error 2");
+                } else {
+                    sym = "ln"; // set the case to ln
+                    symView.setText("ln");
+                    val1 = Float.parseFloat(edttxt.getText() + "");
+                    dec = false; // reset decimal boolean to false
+                    edttxt.setText(Math.log(val1) + "");
+                    sym = null;
+                    neg = false; // reset negative to false
+                }
             }
         });
 
@@ -317,6 +351,7 @@ public class MainActivity extends AppCompatActivity {
                 dec = false; // reset decimal boolean to false
                 edttxt.setText(Math.sqrt(val1) + "");
                 sym = null;
+                neg = false; // reset negative to false
             }
         });
 
@@ -328,6 +363,7 @@ public class MainActivity extends AppCompatActivity {
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 dec = false; // reset decimal boolean to false
                 edttxt.setText(null);
+                neg = false; // reset negative to false
             }
         });
 
@@ -345,6 +381,7 @@ public class MainActivity extends AppCompatActivity {
                 dec = false; // reset decimal boolean to false
                 edttxt.setText(val1 + "");
                 sym = null;
+                neg = false; // reset negative to false
             }
         });
 
@@ -369,7 +406,7 @@ public class MainActivity extends AppCompatActivity {
                         case "x":
                             edttxt.setText(val1 * val2 + "");
                             break;
-                        case "÷":
+                        case "/":
                             edttxt.setText(val1 / val2 + "");
                             break;
                         case "yˣ":
