@@ -171,8 +171,8 @@ public class MainActivity extends AppCompatActivity {
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sym = "+"; // set the case the addition
-                symView.setText(sym);
+                sym = "+"; // set the case to addition
+                symView.setText("+");
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 edttxt.setText(null);
                 dec = false; // reset decimal boolean to false as we have a new number, val2
@@ -182,24 +182,33 @@ public class MainActivity extends AppCompatActivity {
         buttonSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                sym = "-"; // set the case to subtraction
+                symView.setText("-");
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 edttxt.setText(null);
+                dec = false; // reset decimal boolean to false as we have a new number, val2
             }
         });
 
         buttonMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                sym = "x"; // set the case to multiplication
+                symView.setText("x");
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 edttxt.setText(null);
+                dec = false; // reset decimal boolean to false as we have a new number, val2
             }
         });
 
         buttonDiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                sym = "÷"; // set the case to division
+                symView.setText("÷");
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 edttxt.setText(null);
+                dec = false; // reset decimal boolean to false as we have a new number, val2
             }
         });
 
@@ -207,28 +216,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 val2 = Float.parseFloat(edttxt.getText() + "");
+                // temporary code below for testing - use switch(sign) later
                 if (sym == "+") {
                     edttxt.setText(val1+val2 + "");
                 }
-//                if ((val2 == 0.0) && (div == true)) {
-//                    edttxt.setText("Error" + "");
-//                }
-//                if (mul == true) {
-//                    edttxt.setText(val1 * val2 + "");
-//                    mul = false;
-//                }
-//                if (div == true) {
-//                    edttxt.setText(val1 / val2 + "");
-//                    div = false;
-//                }
-//                if (add == true) {
-//                    edttxt.setText(val1 + val2 + "");
-//                    add = false;
-//                }
-//                if (sub == true) {
-//                    edttxt.setText(val1 - val2 + "");
-//                    sub = false;
-//                }
+                if (sym == "-") {
+                    edttxt.setText(val1-val2 + "");
+                }
+                if (sym == "x") {
+                    edttxt.setText(val1*val2 + "");
+                }
+                if (sym == "÷") {
+                    edttxt.setText(val1/val2 + "");
+                }
+                // after equals, must reset the display afterwards
             }
         });
 
