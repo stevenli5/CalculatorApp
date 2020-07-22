@@ -15,7 +15,7 @@ This calculator contains many new implementations compared to the initially comm
 ### Architecture
 
 ### Test Cases
-Refer to ...
+
 
 ### Future Implementations
 
