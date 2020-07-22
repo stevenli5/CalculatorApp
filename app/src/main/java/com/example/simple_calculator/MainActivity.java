@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonCls, buttonDec, buttonAdd, buttonSub, buttonMul, buttonDiv, buttonEqu, buttonDark,
+    Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonPi, buttonCls, buttonDec, buttonAdd, buttonSub, buttonMul, buttonDiv, buttonEqu, buttonDark,
             buttonSin, buttonCos, buttonTan, buttonLog, buttonLn, buttonSqrt, buttonExp, buttonFac, buttonMan;
     TextView edttxt, symView; // symView added for display
     String sym; // to display the sign AND to determine the sign to calculate
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         button7 = (Button) findViewById(R.id.btn7);
         button8 = (Button) findViewById(R.id.btn8);
         button9 = (Button) findViewById(R.id.btn9);
+        buttonPi = (Button) findViewById(R.id.btn_pi);
 
         edttxt = (TextView) findViewById(R.id.screen);
         symView = (TextView) findViewById(R.id.symbol);
@@ -151,6 +152,13 @@ public class MainActivity extends AppCompatActivity {
                 edttxt.setText(edttxt.getText() + "9");
             }
         });
+
+        buttonPi.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                edttxt.setText("3.14159265"); // to 10 digits, as the display only supports up to 10 digits
+            }
+        }));
 
         buttonCls.setOnClickListener(new View.OnClickListener() {
             @Override
