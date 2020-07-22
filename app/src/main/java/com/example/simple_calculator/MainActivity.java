@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonPi, buttonCls, buttonDec, buttonAdd, buttonSub, buttonMul, buttonDiv, buttonEqu, buttonDark,
+    Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonPi, buttonNeg, buttonCls, buttonDec, buttonAdd, buttonSub, buttonMul, buttonDiv, buttonEqu, buttonDark,
             buttonSin, buttonCos, buttonTan, buttonLog, buttonLn, buttonSqrt, buttonExp, buttonFac, buttonMan;
     TextView edttxt, symView; // symView added for display
     String sym; // to display the sign AND to determine the sign to calculate
@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         edttxt = (TextView) findViewById(R.id.screen);
         symView = (TextView) findViewById(R.id.symbol);
 
+        buttonNeg = (Button) findViewById(R.id.btn_neg);
         buttonCls = (Button) findViewById(R.id.btn_cls);
         buttonDec = (Button) findViewById(R.id.btn_dec);
         buttonAdd = (Button) findViewById(R.id.btn_add);
