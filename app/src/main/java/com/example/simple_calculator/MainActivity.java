@@ -309,7 +309,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 sym = "yˣ"; // set the case to exponent
-                symView.setText("yˣ");
+                symView.setText(edttxt.getText() + "ˣ");
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 dec = false; // reset decimal boolean to false
                 edttxt.setText(null);
@@ -352,6 +352,11 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         case "÷":
                             edttxt.setText(val1 / val2 + "");
+                            break;
+                        case "yˣ":
+                            edttxt.setText(Math.pow(val1, val2) + "");
+                            break;
+                        default:
                             break;
                     }
                 }
