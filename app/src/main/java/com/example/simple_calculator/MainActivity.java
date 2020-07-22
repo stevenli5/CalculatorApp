@@ -231,9 +231,32 @@ public class MainActivity extends AppCompatActivity {
                 sym = "sin"; // set the case to sin
                 symView.setText("sin");
                 val1 = Float.parseFloat(edttxt.getText() + "");
-//                edttxt.setText(null);
-                dec = false; // reset decimal boolean to false as we have a new number, val2
+                dec = false; // reset decimal boolean to false
                 edttxt.setText(Math.sin(val1) + "");
+                sym = null;
+            }
+        });
+
+        buttonCos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sym = "cos"; // set the case to cos
+                symView.setText("cos");
+                val1 = Float.parseFloat(edttxt.getText() + "");
+                dec = false; // reset decimal boolean to false
+                edttxt.setText(Math.cos(val1) + "");
+                sym = null;
+            }
+        });
+
+        buttonTan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sym = "tan"; // set the case to sin
+                symView.setText("tan");
+                val1 = Float.parseFloat(edttxt.getText() + "");
+                dec = false; // reset decimal boolean to false as we have a new number, val2
+                edttxt.setText(Math.tan(val1) + "");
                 sym = null;
             }
         });

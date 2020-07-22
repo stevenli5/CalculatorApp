@@ -461,8 +461,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="22dp"
-        android:layout_marginLeft="22dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
         android:layout_marginTop="74dp"
         android:background="@drawable/border"
         android:gravity="center|end"
@@ -473,18 +473,19 @@
 
     <TextView
         android:id="@+id/symbol"
-        android:layout_width="54dp"
-        android:layout_height="56dp"
+        android:layout_width="73dp"
+        android:layout_height="62dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="87dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginRight="18dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:background="@drawable/border"
         android:gravity="center"
+        android:textAllCaps="false"
         android:textColor="@color/mainText"
-        android:textSize="38dp" />
+        android:textSize="35sp" />
 
     <!--        android:text=""-->
     app:layout_constraintBottom_toBottomOf="parent"
