@@ -9,7 +9,8 @@ This calculator contains many new implementations compared to the initially comm
 - Dark Mode
 - User Manual
 - Completely redesigned user interface
-- New log, ln, square root, exponential, factorial, and pi buttons
+- New log, ln, square root, exponential, and factorial buttons
+- New negative and pi buttons
 - New symbol viewer, to display what operation the user chose
 
 ### Architecture
