@@ -10,7 +10,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonCls, buttonDec, buttonAdd, buttonSub, buttonMul, buttonDiv, buttonEqu, buttonDark;
+    Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonCls, buttonDec, buttonAdd, buttonSub, buttonMul, buttonDiv, buttonEqu, buttonDark,
+            buttonSin, buttonCos, buttonTan, buttonBack, buttonLog, buttonLn, buttonSqrt, buttonExp, buttonFac;
     TextView edttxt, symView; // symView added for display
     String sym; // to display the sign AND to determine the sign to calculate
     float val1, val2;
@@ -44,6 +45,15 @@ public class MainActivity extends AppCompatActivity {
         buttonDiv = (Button) findViewById(R.id.btn_div);
         buttonEqu = (Button) findViewById(R.id.btn_equ);
         buttonDark = (Button) findViewById(R.id.btn_dark);
+        buttonSin = (Button) findViewById(R.id.btn_sin);
+        buttonCos = (Button) findViewById(R.id.btn_cos);
+        buttonTan = (Button) findViewById(R.id.btn_tan);
+        buttonBack = (Button) findViewById(R.id.btn_back);
+        buttonLog = (Button) findViewById(R.id.btn_log);
+        buttonLn = (Button) findViewById(R.id.btn_ln);
+        buttonSqrt = (Button) findViewById(R.id.btn_sqt);
+        buttonExp = (Button) findViewById(R.id.btn_exp);
+        buttonFac = (Button) findViewById(R.id.btn_fac);
 
         SharedPreferences appMode = getSharedPreferences("AppSettingPrefs", 0); //default app mode
         final boolean isNightModeOn = appMode.getBoolean("NightMode", false); //default light mode
