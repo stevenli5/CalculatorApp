@@ -13,6 +13,8 @@ This calculator contains many new implementations compared to the initially comm
 - New negative and pi buttons
 - New symbol viewer, to display what operation the user chose
 
+### Video Walkthrough
+
 ### Architecture
 
 ### User Stories
@@ -43,3 +45,5 @@ Actual Result:
 
 
 ### Credits
+Dark Mode: https://www.youtube.com/watch?v=QhGf8fGJM8U
+Second Activity: https://codinginflow.com/tutorials/android/open-activity-on-button-click
