@@ -3,6 +3,7 @@ package com.example.simple_calculator;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -101,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         button0.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 edttxt.setText(edttxt.getText() + "0");
@@ -108,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         button1.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 edttxt.setText(edttxt.getText() + "1");
@@ -115,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         button2.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 edttxt.setText(edttxt.getText() + "2");
@@ -122,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         button3.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 edttxt.setText(edttxt.getText() + "3");
@@ -129,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         button4.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 edttxt.setText(edttxt.getText() + "4");
@@ -136,6 +142,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         button5.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 edttxt.setText(edttxt.getText() + "5");
@@ -143,6 +150,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         button6.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 edttxt.setText(edttxt.getText() + "6");
@@ -150,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         button7.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 edttxt.setText(edttxt.getText() + "7");
@@ -157,6 +166,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         button8.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 edttxt.setText(edttxt.getText() + "8");
@@ -164,6 +174,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         button9.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 edttxt.setText(edttxt.getText() + "9");
@@ -171,6 +182,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         buttonPi.setOnClickListener((new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
                 edttxt.setText("3.14159265"); // to 10 digits, as the display only supports up to 10 digits
@@ -185,12 +197,13 @@ public class MainActivity extends AppCompatActivity {
                 symView.setText("");
                 val1 = 0;
                 val2 = 0;
-                dec = false;
+                dec = false; // reset decimal to no decimal
                 neg = false; // reset negative to false
             }
         });
 
         buttonDec.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 if (dec) { // if there is already a decimal then continue on, user mistake
@@ -208,13 +221,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         buttonNeg.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
-                if (!neg) {
+                if (!neg) { // if the number is already negative skip and reprint the current number
                     String a = (String) edttxt.getText();
-                    String b = a.replaceAll(" ", "");
+                    String b = a.replaceAll(" ", ""); // in order to get rid of the invisible space in between the negative and number
                     edttxt.setText("-" + b);
-                    neg = true;
+                    neg = true; // a negative is now present
                 } else {
                     edttxt.setText(edttxt.getText());
                 }
@@ -270,96 +284,95 @@ public class MainActivity extends AppCompatActivity {
         });
 
         buttonSin.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
-                sym = "sin"; // set the case to sin
                 symView.setText("sin");
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 dec = false; // reset decimal boolean to false
                 edttxt.setText(Math.sin(val1) + "");
-                sym = null;
                 neg = false; // reset negative to false
             }
         });
 
         buttonCos.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
-                sym = "cos"; // set the case to cos
                 symView.setText("cos");
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 dec = false; // reset decimal boolean to false
                 edttxt.setText(Math.cos(val1) + "");
-                sym = null;
                 neg = false; // reset negative to false
             }
         });
 
         buttonTan.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
-                sym = "tan"; // set the case to sin
                 symView.setText("tan");
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 dec = false; // reset decimal boolean to false
                 edttxt.setText(Math.tan(val1) + "");
-                sym = null;
                 neg = false; // reset negative to false
             }
         });
 
         buttonLog.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
                 if (neg) {
                     edttxt.setText("Error 2");
                 } else {
-                    sym = "log"; // set the case to log
                     symView.setText("log");
                     val1 = Float.parseFloat(edttxt.getText() + "");
                     dec = false; // reset decimal boolean to false
                     edttxt.setText(Math.log10(val1) + "");
-                    sym = null;
                     neg = false; // reset negative to false
                 }
             }
         });
 
         buttonLn.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
                 if (neg) {
                     edttxt.setText("Error 2");
                 } else {
-                    sym = "ln"; // set the case to ln
                     symView.setText("ln");
                     val1 = Float.parseFloat(edttxt.getText() + "");
                     dec = false; // reset decimal boolean to false
                     edttxt.setText(Math.log(val1) + "");
-                    sym = null;
                     neg = false; // reset negative to false
                 }
             }
         });
 
         buttonSqrt.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
-                sym = "√"; // set the case to sqrt
                 symView.setText("√");
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 dec = false; // reset decimal boolean to false
                 edttxt.setText(Math.sqrt(val1) + "");
-                sym = null;
                 neg = false; // reset negative to false
             }
         });
 
         buttonExp.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
-                sym = "yˣ"; // set the case to exponent
-                symView.setText(edttxt.getText() + "ˣ");
+                sym = "exp"; // set the case to exponent
+                if (edttxt.getText().length() > 1) {
+                    symView.setText("yˣ");
+                } else {
+                    symView.setText(edttxt.getText() + "ˣ");
+                }
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 dec = false; // reset decimal boolean to false
                 edttxt.setText(null);
@@ -368,32 +381,34 @@ public class MainActivity extends AppCompatActivity {
         });
 
         buttonFac.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
-                sym = "!"; // set the case to factorial
                 symView.setText("!");
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 float i = (int)val1 - 1;
                 while (i > 0) {
                     val1 = val1 * i;
                     i--;
-                } // after this while loop we have successfully "factorialized" the number
+                } // after this while loop we have successfully 'factorialized' the number
                 dec = false; // reset decimal boolean to false
                 edttxt.setText(val1 + "");
-                sym = null;
                 neg = false; // reset negative to false
             }
         });
 
         buttonEqu.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 val2 = Float.parseFloat(edttxt.getText() + "");
                 if (sym == null) {
                     edttxt.setText(edttxt.getText());
-                } else if (sym == "÷") {
+                } else if (sym == "/") {
                     if (val2 == 0.0) {
                         edttxt.setText("Error 1");
+                    } else {
+                        edttxt.setText(val1 / val2 + "");
                     }
                 } else {
                     switch (sym) {
@@ -406,10 +421,7 @@ public class MainActivity extends AppCompatActivity {
                         case "x":
                             edttxt.setText(val1 * val2 + "");
                             break;
-                        case "/":
-                            edttxt.setText(val1 / val2 + "");
-                            break;
-                        case "yˣ":
+                        case "exp":
                             edttxt.setText(Math.pow(val1, val2) + "");
                             break;
                         default:

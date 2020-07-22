@@ -490,21 +490,19 @@
 
     <TextView
         android:id="@+id/screen"
-        android:layout_width="312dp"
-        android:layout_height="84dp"
+        android:layout_width="311dp"
+        android:layout_height="62dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="12dp"
         android:layout_marginLeft="12dp"
-        android:layout_marginTop="74dp"
+        android:layout_marginTop="84dp"
         android:background="@drawable/border"
         android:gravity="center|end"
-        android:maxLength="10"
-        android:text=" "
         android:textColor="@color/mainText"
-        android:textSize="52sp"
+        android:textSize="26sp"
         android:textStyle="bold" />
 
     <TextView

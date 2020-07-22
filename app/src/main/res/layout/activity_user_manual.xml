@@ -8,6 +8,111 @@
     tools:context=".UserManual">
 
 
+    <TextView
+        android:id="@+id/txt_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="135dp"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="491dp"
+        android:text="Error Messages"
+        android:textColor="@color/mainText"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
+        android:layout_marginTop="72dp"
+        android:text="Instructions"
+        android:textColor="@color/mainText"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_gen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="403dp"
+        android:text="General Information"
+        android:textColor="@color/mainText"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/img_err2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="561dp"
+        android:background="@drawable/clear_btn"
+        android:scaleX="-1"
+
+        app:srcCompat="@drawable/abc_vector_test" />
+
+    <ImageView
+        android:id="@+id/img_ins2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="169dp"
+        android:background="@drawable/clear_btn"
+        android:scaleX="-1"
+
+        app:srcCompat="@drawable/abc_vector_test" />
+
+    <ImageView
+        android:id="@+id/img_ins3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="328dp"
+        android:background="@drawable/clear_btn"
+        android:scaleX="-1"
+
+        app:srcCompat="@drawable/abc_vector_test" />
+
+    <ImageView
+        android:id="@+id/img_gen1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="437dp"
+        android:background="@drawable/clear_btn"
+        android:scaleX="-1"
+
+        app:srcCompat="@drawable/abc_vector_test" />
+
     <Button
         android:id="@+id/btn_back"
         android:layout_width="99dp"
@@ -27,7 +132,7 @@
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txt_userManual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -42,20 +147,104 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="366dp"
-        android:layout_height="60dp"
+        android:id="@+id/txt_err1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="79dp"
-        android:text="Hello World"
-        android:textColor="@color/mainText" />
+        android:layout_marginStart="37dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="527dp"
+        android:text="Error 1: Cannot divide by 0."
+        android:textColor="@color/mainText"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txt_err2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="37dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="560dp"
+        android:layout_marginEnd="8dp"
+        android:text="Error 2: Cannot log/ln a negative number."
+        android:textColor="@color/mainText"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txt_ins1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="109dp"
+        android:layout_marginEnd="7dp"
+        android:text="Press the Clear (C) button after receiving a result to do another calculation."
+        android:textColor="@color/mainText"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txt_ins3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="326dp"
+        android:layout_marginEnd="7dp"
+        android:text="The pi (𝛑) button should be not be combined with another number before an operation."
+        android:textColor="@color/mainText"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txt_gen1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="438dp"
+        android:layout_marginEnd="7dp"
+        android:text="Sine (sin), cosine (cos) and tangent (tan) operations are performed in radians."
+        android:textColor="@color/mainText"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txt_ins2"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="167dp"
+        android:layout_marginEnd="8dp"
+        android:text="To calculate the sine (sin), cosine (cos), tangent (tan), logarithm (log), natural logarithm (ln), square root (√), and factorial (!) of a number, input the number first followed by the desired operation. Do not press the aforementioned buttons twice or without an input."
+        android:textColor="@color/mainText"
+        android:textSize="18.8sp" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/img_err1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -63,7 +252,22 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="79dp"
+        android:layout_marginTop="529dp"
+        android:background="@drawable/clear_btn"
+        android:scaleX="-1"
+
+        app:srcCompat="@drawable/abc_vector_test" />
+
+    <ImageView
+        android:id="@+id/img_ins1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="112dp"
         android:background="@drawable/clear_btn"
         android:scaleX="-1"
 
