@@ -3,6 +3,7 @@ package com.example.simple_calculator;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,11 @@ public class MainActivity extends AppCompatActivity {
     String sym; // to display the sign AND to determine the sign to calculate
     float val1, val2;
     boolean dec; // adding more functionality for decimals
+
+    public void openManual() {
+        Intent intent = new Intent(this, UserManual.class);
+        startActivity(intent);
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         buttonSqrt = (Button) findViewById(R.id.btn_sqt);
         buttonExp = (Button) findViewById(R.id.btn_exp);
         buttonFac = (Button) findViewById(R.id.btn_fac);
+        buttonMan = (Button) findViewById(R.id.btn_man);
 
         SharedPreferences appMode = getSharedPreferences("AppSettingPrefs", 0); //default app mode
         final boolean isNightModeOn = appMode.getBoolean("NightMode", false); //default light mode
@@ -82,7 +89,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-//a
+
+        buttonMan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openManual();
+            }
+        });
+
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
