@@ -21,29 +21,29 @@ This calculator contains many new implementations compared to the initially comm
 
 ### Test Cases
 
-1. Determine the log of 10.
-Expected Result: 1.0
-Actual Result:
+1. Determine the log of 10.  
+Expected Result: 1.0  
+Actual Result:  
 
-2. Determine the factorial of 9.
-Expected Result: 362880.0
-Actual Result:
+2. Determine the factorial of 9.  
+Expected Result: 362880.0  
+Actual Result:  
 
-3. Determine the result of sin(-4).
-Expected Result: 0.756802495 (...)
-Actual Result:
+3. Determine the result of sin(-4).  
+Expected Result: 0.756802495 (...)  
+Actual Result:  
 
-4. Determine the result of 99 / 0.
-Expected Result: Error 1
-Actual Result:
+4. Determine the result of 99 / 0.  
+Expected Result: Error 1  
+Actual Result:  
 
-5. Clear the Screen and Enable Dark Mode.
-Expected Result:
-Actual Result:
+5. Clear the Screen and Enable Dark Mode.  
+Expected Result:  
+Actual Result:  
 
 ### Future Implementations
 
 
 ### Credits
-Dark Mode: https://www.youtube.com/watch?v=QhGf8fGJM8U
-Second Activity: https://codinginflow.com/tutorials/android/open-activity-on-button-click
+Dark Mode: https://www.youtube.com/watch?v=QhGf8fGJM8U  
+Second Activity: https://codinginflow.com/tutorials/android/open-activity-on-button-click  
