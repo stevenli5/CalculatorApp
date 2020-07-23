@@ -393,16 +393,20 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
-                sym = "exp"; // set the case to exponent
-                if (edttxt.getText().length() > 1) {
-                    symView.setText("yˣ");
+                if (sym != null) {
+                    edttxt.setText(edttxt.getText());
                 } else {
-                    symView.setText(edttxt.getText() + "ˣ");
+                    sym = "exp"; // set the case to exponent
+                    if (edttxt.getText().length() > 1) {
+                        symView.setText("yˣ");
+                    } else {
+                        symView.setText(edttxt.getText() + "ˣ");
+                    }
+                    val1 = Float.parseFloat(edttxt.getText() + "");
+                    dec = false; // reset decimal boolean to false
+                    edttxt.setText(null);
+                    neg = false; // reset negative to false
                 }
-                val1 = Float.parseFloat(edttxt.getText() + "");
-                dec = false; // reset decimal boolean to false
-                edttxt.setText(null);
-                neg = false; // reset negative to false
             }
         });
 
