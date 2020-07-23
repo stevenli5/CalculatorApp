@@ -16,6 +16,9 @@ This calculator contains many new implementations compared to the initially comm
 ### Video Walkthrough
 
 ### Architecture
+All calculator functions can be found in /app/src/main/java/com/example/simple_calculator/MainActivity.java  
+Calculator layout can be found in /app/src/main/res/layout/activity_main.xml  
+User Manual can be found in /app/src/main/res/layout/activity_user_manual.xml  
 
 Here is a basic unfinished state machine from Umple. Issues were ran into and so the final product was drawn out by hand.  
 ![image](https://user-images.githubusercontent.com/60322211/88244459-f30f9480-cc61-11ea-8467-b629819d4a05.png)  
