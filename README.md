@@ -14,6 +14,7 @@ This calculator contains many new implementations compared to the initially comm
 - New symbol viewer, to display what operation the user chose
 
 ### Video Walkthrough
+https://www.youtube.com/watch?v=BRvh4-MM3KI
 
 ### Architecture
 All calculator functions can be found in /app/src/main/java/com/example/simple_calculator/MainActivity.java  
