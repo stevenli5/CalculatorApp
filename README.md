@@ -56,9 +56,14 @@ Actual Result: -0.7568024953079282
 4. Determine the result of 99 / 0.  
 Input "99" in the display, press "÷", press "0", and press "=".  
 Expected Result: Error 1  
-Actual Result: Error 1
+Actual Result: Error 1  
 
-5. Clear the Screen and Enable Dark Mode.  
+5. Determine the result of square root of negative 5.  
+Input "5" in the display, press "( - )", and press "√".  
+Expected Result: Error 2  
+Actual Result: Error 2  
+
+6. Clear the Screen and Enable Dark Mode.  
 Press "Clear and Enable Dark Mode".  
 Expected Result and Actual Result:  
 ![image](https://user-images.githubusercontent.com/60322211/88239628-ecc5ec00-cc52-11ea-9a1d-e12ece1b180b.png)
