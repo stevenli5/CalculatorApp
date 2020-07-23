@@ -56,6 +56,7 @@ Expected Result and Actual Result:
 ### Future Implementations
 - Backspace button, where the user can delete 1 single digit at a time (in MainActivity.java)  
 - Cubic root/x root, where the user can root any number to any number (in MainActivity.java)
+- Ability to switch from radians (RAD) to degrees (DEG) (in MainActivity.java)
 
 ### Credits
 Dark Mode: https://www.youtube.com/watch?v=QhGf8fGJM8U  
