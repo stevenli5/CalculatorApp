@@ -21,7 +21,7 @@ This calculator contains many new implementations compared to the initially comm
 
 ### Test Cases
 
-1. Determine the log of 10. 
+1. Determine the log of 10.  
 Input "10" in the display and press "log".  
 Expected Result: 1.0  
 Actual Result: 1.0
