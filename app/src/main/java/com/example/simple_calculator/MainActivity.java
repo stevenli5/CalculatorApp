@@ -600,7 +600,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (neg) {
-                    edttxt.setText("Error 3");
+                    edttxt.setText("Error 4");
                     eq = true;
                 } else {
                     symView.setText("log");
@@ -620,7 +620,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (neg) {
-                    edttxt.setText("Error 3");
+                    edttxt.setText("Error 4");
                     eq = true;
                 } else {
                     symView.setText("ln");
@@ -684,18 +684,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 symView.setText("!");
                 val1 = Float.parseFloat(edttxt.getText() + "");
-                if (val1 > 0) {
+                if (neg) {
                     float i = (int)val1 - 1;
                     while (i > 0) {
                         val1 = val1 * i;
                         i--;
                     } // after this while loop we have successfully 'factorialized' the number
                 } else {
-                    float i = (int)val1*-1 - 1;
-                    while (i > 0) {
-                        val1 = val1 * i;
-                        i--;
-                    } // after this while loop we have successfully 'factorialized' the number
+                    edttxt.setText("Error 3");
                 }
                 dec = false; // reset decimal boolean to false
                 edttxt.setText(val1 + "");
