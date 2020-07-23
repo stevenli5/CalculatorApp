@@ -248,48 +248,64 @@ public class MainActivity extends AppCompatActivity {
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sym = "+"; // set the case to addition
-                symView.setText("+");
-                val1 = Float.parseFloat(edttxt.getText() + "");
-                edttxt.setText(null);
-                dec = false; // reset decimal boolean to false as we have a new number, val2
-                neg = false; // reset negative to false
+                if (sym != null) {
+                    edttxt.setText(edttxt.getText());
+                } else {
+                    sym = "+"; // set the case to addition
+                    symView.setText("+");
+                    val1 = Float.parseFloat(edttxt.getText() + "");
+                    edttxt.setText(null);
+                    dec = false; // reset decimal boolean to false as we have a new number, val2
+                    neg = false; // reset negative to false
+                }
             }
         });
 
         buttonSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sym = "-"; // set the case to subtraction
-                symView.setText("-");
-                val1 = Float.parseFloat(edttxt.getText() + "");
-                edttxt.setText(null);
-                dec = false; // reset decimal boolean to false as we have a new number, val2
-                neg = false; // reset negative to false
+                if (sym != null) {
+                    edttxt.setText(edttxt.getText());
+                } else {
+                    sym = "-"; // set the case to subtraction
+                    symView.setText("-");
+                    val1 = Float.parseFloat(edttxt.getText() + "");
+                    edttxt.setText(null);
+                    dec = false; // reset decimal boolean to false as we have a new number, val2
+                    neg = false; // reset negative to false
+                }
             }
         });
 
         buttonMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sym = "x"; // set the case to multiplication
-                symView.setText("x");
-                val1 = Float.parseFloat(edttxt.getText() + "");
-                edttxt.setText(null);
-                dec = false; // reset decimal boolean to false as we have a new number, val2
-                neg = false; // reset negative to false
+                if (sym != null) {
+                    edttxt.setText(edttxt.getText());
+                } else {
+                    sym = "x"; // set the case to multiplication
+                    symView.setText("x");
+                    val1 = Float.parseFloat(edttxt.getText() + "");
+                    edttxt.setText(null);
+                    dec = false; // reset decimal boolean to false as we have a new number, val2
+                    neg = false; // reset negative to false
+                }
             }
         });
 
         buttonDiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sym = "/"; // set the case to division
-                symView.setText("÷");
-                val1 = Float.parseFloat(edttxt.getText() + "");
-                edttxt.setText(null);
-                dec = false; // reset decimal boolean to false as we have a new number, val2
-                neg = false; // reset negative to false
+                if (sym != null) {
+                    edttxt.setText(edttxt.getText());
+                } else {
+                    sym = "/"; // set the case to division
+                    symView.setText("÷");
+                    val1 = Float.parseFloat(edttxt.getText() + "");
+                    edttxt.setText(null);
+                    dec = false; // reset decimal boolean to false as we have a new number, val2
+                    neg = false; // reset negative to false
+                }
             }
         });
 
