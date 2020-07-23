@@ -54,8 +54,7 @@ Expected Result and Actual Result:
 ![image](https://user-images.githubusercontent.com/60322211/88239628-ecc5ec00-cc52-11ea-9a1d-e12ece1b180b.png)
 
 ### Future Implementations
-Future changes include:
-- Backspace button, where the user can delete 1 single digit at a time (in MainActivity.java)
+- Backspace button, where the user can delete 1 single digit at a time (in MainActivity.java)  
 - Cubic root/x root, where the user can root any number to any number (in MainActivity.java)
 
 ### Credits
