@@ -40,7 +40,7 @@ Actual Result: 362880.0
 
 3. Determine the result of sin(4).  
 Input "4" in the display and press "sin".  
-Expected Result: -0.7568024953079282
+Expected Result: -0.7568024953079282  
 Actual Result: -0.7568024953079282
 
 4. Determine the result of 99 / 0.  
