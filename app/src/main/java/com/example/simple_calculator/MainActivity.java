@@ -430,15 +430,25 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                if (dec) { // if there is already a decimal then continue on, user mistake
-                    edttxt.setText(edttxt.getText());
-                } else { // else, we see if there is input from the user already
-                    if (edttxt.getText().equals("")) {
-                        edttxt.setText("0." + ""); // by default, a null edttxt means the user wants "0."
-                    } else {
-                        edttxt.setText(edttxt.getText() + "."); // else, we add a decimal
-                    }
+                if (eq) {
+                    edttxt.setText("0." + "");
+                    symView.setText("");
+                    sym = null;
+                    eq = false;
                     dec = true;
+                    neg = false;
+                    btn = true;
+                } else {
+                    if (dec) { // if there is already a decimal then continue on, user mistake
+                        edttxt.setText(edttxt.getText());
+                    } else { // else, we see if there is input from the user already
+                        if (edttxt.getText().equals("")) {
+                            edttxt.setText("0." + ""); // by default, a null edttxt means the user wants "0."
+                        } else {
+                            edttxt.setText(edttxt.getText() + "."); // else, we add a decimal
+                        }
+                        dec = true;
+                    }
                 }
             }
         });
@@ -447,13 +457,23 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
-                if (!neg) { // if the number is already negative skip and reprint the current number
-                    String a = (String) edttxt.getText();
-                    String b = a.replaceAll(" ", ""); // in order to get rid of the invisible space in between the negative and number
-                    edttxt.setText("-" + b);
-                    neg = true; // a negative is now present
+                if (eq) {
+                    edttxt.setText("-");
+                    symView.setText("");
+                    sym = null;
+                    eq = false;
+                    dec = false;
+                    neg = true;
+                    btn = true;
                 } else {
-                    edttxt.setText(edttxt.getText());
+                    if (!neg) { // if the number is already negative skip and reprint the current number
+                        String a = (String) edttxt.getText();
+                        String b = a.replaceAll(" ", ""); // in order to get rid of the invisible space in between the negative and number
+                        edttxt.setText("-" + b);
+                        neg = true; // a negative is now present
+                    } else {
+                        edttxt.setText(edttxt.getText());
+                    }
                 }
             }
         });
@@ -581,6 +601,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (neg) {
                     edttxt.setText("Error 3");
+                    eq = true;
                 } else {
                     symView.setText("log");
                     val1 = Float.parseFloat(edttxt.getText() + "");
@@ -600,6 +621,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (neg) {
                     edttxt.setText("Error 3");
+                    eq = true;
                 } else {
                     symView.setText("ln");
                     val1 = Float.parseFloat(edttxt.getText() + "");
@@ -621,6 +643,7 @@ public class MainActivity extends AppCompatActivity {
                 val1 = Float.parseFloat(edttxt.getText() + "");
                 if (neg) {
                     edttxt.setText("Error 2");
+                    eq = true;
                 } else {
                     dec = false; // reset decimal boolean to false
                     edttxt.setText(Math.sqrt(val1) + "");
@@ -661,11 +684,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 symView.setText("!");
                 val1 = Float.parseFloat(edttxt.getText() + "");
-                float i = (int)val1 - 1;
-                while (i > 0) {
-                    val1 = val1 * i;
-                    i--;
-                } // after this while loop we have successfully 'factorialized' the number
+                if (val1 > 0) {
+                    float i = (int)val1 - 1;
+                    while (i > 0) {
+                        val1 = val1 * i;
+                        i--;
+                    } // after this while loop we have successfully 'factorialized' the number
+                } else {
+                    float i = (int)val1*-1 - 1;
+                    while (i > 0) {
+                        val1 = val1 * i;
+                        i--;
+                    } // after this while loop we have successfully 'factorialized' the number
+                }
                 dec = false; // reset decimal boolean to false
                 edttxt.setText(val1 + "");
                 neg = false; // reset negative to false
@@ -685,6 +716,7 @@ public class MainActivity extends AppCompatActivity {
                 } else if (sym == "/") {
                     if (val2 == 0.0) {
                         edttxt.setText("Error 1");
+                        eq = true;
                     } else {
                         edttxt.setText(val1 / val2 + "");
                         eq = true;
