@@ -11,6 +11,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+// ==========================================================================
+//
+// MainActivity.java
+//      All calculation functions can be found here.
+//
+// @author: Steven Li (sli330@uottawa.ca)
+// @License: MIT License, github.com/stevenli5/CalculatorApp/blob/master/LICENSE
+//
+// ==========================================================================
+
 public class MainActivity extends AppCompatActivity {
     Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonPi, buttonNeg, buttonCls, buttonDec, buttonAdd, buttonSub, buttonMul, buttonDiv, buttonEqu, buttonDark,
             buttonSin, buttonCos, buttonTan, buttonLog, buttonLn, buttonSqrt, buttonExp, buttonFac, buttonMan;
@@ -18,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     String sym; // to display the sign AND to determine the sign to calculate
     float val1, val2;
     boolean dec; // adding more functionality for decimals
-    boolean neg;
+    boolean neg; // checking if value is already negative
 
     public void openManual() {
         Intent intent = new Intent(this, UserManual.class);

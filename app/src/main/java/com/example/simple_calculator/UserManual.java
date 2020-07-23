@@ -7,6 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+// ==========================================================================
+//
+// UserManual.java
+//      Basic function for going back to calculator from the User Manual.
+//
+// @author: Steven Li (sli330@uottawa.ca)
+// @License: MIT License, github.com/stevenli5/CalculatorApp/blob/master/LICENSE
+//
+// ==========================================================================
+
 public class UserManual extends AppCompatActivity {
     Button buttonBack;
 
