@@ -17,7 +17,14 @@ This calculator contains many new implementations compared to the initially comm
 
 ### Architecture
 
+Here is a basic unfinished state machine from Umple. Issues were ran into and so the final product was drawn out by hand.  
+![image](https://user-images.githubusercontent.com/60322211/88244459-f30f9480-cc61-11ea-8467-b629819d4a05.png)  
+![image](https://user-images.githubusercontent.com/60322211/88244358-92805780-cc61-11ea-94c7-04eafdd6d638.png)  
+
 ### User Stories
+1. A student wants to determine what 2 to the power of 3 is. They input "2", "yˣ", "3", "=", such that the app outputs the answer, "8.0".  
+2. A math teacher wants divide "42" by "0", but runs into "Error 1". They check the user manual and discovers that no number is divisible by "0".  
+3. A cashier wants to determine the taxable amount on a $2 purchase. They input "2", "x", ".13", "=", such that the app outputs the answer, "0.26".
 
 ### Test Cases
 
@@ -47,7 +54,9 @@ Expected Result and Actual Result:
 ![image](https://user-images.githubusercontent.com/60322211/88239628-ecc5ec00-cc52-11ea-9a1d-e12ece1b180b.png)
 
 ### Future Implementations
-
+Future changes include:
+- Backspace button, where the user can delete 1 single digit at a time (in MainActivity.java)
+- Cubic root/x root, where the user can root any number to any number (in MainActivity.java)
 
 ### Credits
 Dark Mode: https://www.youtube.com/watch?v=QhGf8fGJM8U  
