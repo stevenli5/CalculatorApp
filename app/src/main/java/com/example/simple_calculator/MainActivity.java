@@ -684,21 +684,21 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 symView.setText("!");
                 val1 = Float.parseFloat(edttxt.getText() + "");
-                if (neg) {
+                if (val1 > 0) {
                     float i = (int)val1 - 1;
                     while (i > 0) {
                         val1 = val1 * i;
                         i--;
                     } // after this while loop we have successfully 'factorialized' the number
+                    dec = false; // reset decimal boolean to false
+                    edttxt.setText(val1 + "");
+                    neg = false; // reset negative to false
+                    eq = true;
+                    btn = false;
+                    pi = false;
                 } else {
                     edttxt.setText("Error 3");
                 }
-                dec = false; // reset decimal boolean to false
-                edttxt.setText(val1 + "");
-                neg = false; // reset negative to false
-                eq = true;
-                btn = false;
-                pi = false;
             }
         });
 
