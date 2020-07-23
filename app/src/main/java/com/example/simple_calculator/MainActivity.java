@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
     float val1, val2;
     boolean dec; // adding more functionality for decimals
     boolean neg; // checking if value is already negative
+    boolean eq; // checking if user has pressed equals yet
+    boolean btn; // see if a number is pressed
+    boolean pi; // see if pi button is pressed
 
     public void openManual() {
         Intent intent = new Intent(this, UserManual.class);
@@ -41,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         dec = false;
         neg = false;
+        eq = false;
+        btn = false;
+        pi = false;
 
         button0 = (Button) findViewById(R.id.btn0);
         button1 = (Button) findViewById(R.id.btn1);
@@ -115,7 +121,26 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                edttxt.setText(edttxt.getText() + "0");
+                if (eq) {
+                    if (!pi) {
+                        edttxt.setText("0");
+                        eq = false;
+                        sym = null;
+                        symView.setText("");
+                        dec = false;
+                        neg = false;
+                        btn = true;
+                    } else {
+                        edttxt.setText(edttxt.getText());
+                    }
+                } else {
+                    if (pi) {
+                        edttxt.setText(edttxt.getText());
+                    } else {
+                        edttxt.setText(edttxt.getText() + "0");
+                        btn = true;
+                    }
+                }
             }
         });
 
@@ -123,7 +148,26 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                edttxt.setText(edttxt.getText() + "1");
+                if (eq) {
+                    if (!pi) {
+                        edttxt.setText("1");
+                        eq = false;
+                        sym = null;
+                        symView.setText("");
+                        dec = false;
+                        neg = false;
+                        btn = true;
+                    } else {
+                        edttxt.setText(edttxt.getText());
+                    }
+                } else {
+                    if (pi) {
+                        edttxt.setText(edttxt.getText());
+                    } else {
+                        edttxt.setText(edttxt.getText() + "1");
+                        btn = true;
+                    }
+                }
             }
         });
 
@@ -131,7 +175,26 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                edttxt.setText(edttxt.getText() + "2");
+                if (eq) {
+                    if (!pi) {
+                        edttxt.setText("2");
+                        eq = false;
+                        sym = null;
+                        symView.setText("");
+                        dec = false;
+                        neg = false;
+                        btn = true;
+                    } else {
+                        edttxt.setText(edttxt.getText());
+                    }
+                } else {
+                    if (pi) {
+                        edttxt.setText(edttxt.getText());
+                    } else {
+                        edttxt.setText(edttxt.getText() + "2");
+                        btn = true;
+                    }
+                }
             }
         });
 
@@ -139,7 +202,26 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                edttxt.setText(edttxt.getText() + "3");
+                if (eq) {
+                    if (!pi) {
+                        edttxt.setText("3");
+                        eq = false;
+                        sym = null;
+                        symView.setText("");
+                        dec = false;
+                        neg = false;
+                        btn = true;
+                    } else {
+                        edttxt.setText(edttxt.getText());
+                    }
+                } else {
+                    if (pi) {
+                        edttxt.setText(edttxt.getText());
+                    } else {
+                        edttxt.setText(edttxt.getText() + "3");
+                        btn = true;
+                    }
+                }
             }
         });
 
@@ -147,7 +229,26 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                edttxt.setText(edttxt.getText() + "4");
+                if (eq) {
+                    if (!pi) {
+                        edttxt.setText("4");
+                        eq = false;
+                        sym = null;
+                        symView.setText("");
+                        dec = false;
+                        neg = false;
+                        btn = true;
+                    } else {
+                        edttxt.setText(edttxt.getText());
+                    }
+                } else {
+                    if (pi) {
+                        edttxt.setText(edttxt.getText());
+                    } else {
+                        edttxt.setText(edttxt.getText() + "4");
+                        btn = true;
+                    }
+                }
             }
         });
 
@@ -155,7 +256,26 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                edttxt.setText(edttxt.getText() + "5");
+                if (eq) {
+                    if (!pi) {
+                        edttxt.setText("5");
+                        eq = false;
+                        sym = null;
+                        symView.setText("");
+                        dec = false;
+                        neg = false;
+                        btn = true;
+                    } else {
+                        edttxt.setText(edttxt.getText());
+                    }
+                } else {
+                    if (pi) {
+                        edttxt.setText(edttxt.getText());
+                    } else {
+                        edttxt.setText(edttxt.getText() + "5");
+                        btn = true;
+                    }
+                }
             }
         });
 
@@ -163,7 +283,26 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                edttxt.setText(edttxt.getText() + "6");
+                if (eq) {
+                    if (!pi) {
+                        edttxt.setText("6");
+                        eq = false;
+                        sym = null;
+                        symView.setText("");
+                        dec = false;
+                        neg = false;
+                        btn = true;
+                    } else {
+                        edttxt.setText(edttxt.getText());
+                    }
+                } else {
+                    if (pi) {
+                        edttxt.setText(edttxt.getText());
+                    } else {
+                        edttxt.setText(edttxt.getText() + "6");
+                        btn = true;
+                    }
+                }
             }
         });
 
@@ -171,7 +310,26 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                edttxt.setText(edttxt.getText() + "7");
+                if (eq) {
+                    if (!pi) {
+                        edttxt.setText("7");
+                        eq = false;
+                        sym = null;
+                        symView.setText("");
+                        dec = false;
+                        neg = false;
+                        btn = true;
+                    } else {
+                        edttxt.setText(edttxt.getText());
+                    }
+                } else {
+                    if (pi) {
+                        edttxt.setText(edttxt.getText());
+                    } else {
+                        edttxt.setText(edttxt.getText() + "7");
+                        btn = true;
+                    }
+                }
             }
         });
 
@@ -179,7 +337,26 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                edttxt.setText(edttxt.getText() + "8");
+                if (eq) {
+                    if (!pi) {
+                        edttxt.setText("8");
+                        eq = false;
+                        sym = null;
+                        symView.setText("");
+                        dec = false;
+                        neg = false;
+                        btn = true;
+                    } else {
+                        edttxt.setText(edttxt.getText());
+                    }
+                } else {
+                    if (pi) {
+                        edttxt.setText(edttxt.getText());
+                    } else {
+                        edttxt.setText(edttxt.getText() + "8");
+                        btn = true;
+                    }
+                }
             }
         });
 
@@ -187,7 +364,26 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                edttxt.setText(edttxt.getText() + "9");
+                if (eq) {
+                    if (!pi) {
+                        edttxt.setText("9");
+                        eq = false;
+                        sym = null;
+                        symView.setText("");
+                        dec = false;
+                        neg = false;
+                        btn = true;
+                    } else {
+                        edttxt.setText(edttxt.getText());
+                    }
+                } else {
+                    if (pi) {
+                        edttxt.setText(edttxt.getText());
+                    } else {
+                        edttxt.setText(edttxt.getText() + "9");
+                        btn = true;
+                    }
+                }
             }
         });
 
@@ -195,7 +391,22 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
-                edttxt.setText("3.1415926535897932384626433832795028842"); // to 39 digits, as the display only supports up to 40 digits
+                if (eq) {
+                    edttxt.setText("3.1415926535897932384626433832795028842");
+                    eq = false;
+                    sym = null;
+                    symView.setText("");
+                    dec = false;
+                    neg = false;
+                    pi = true; // pi button has been pressed
+                } else {
+                    if (btn) {
+                        edttxt.setText(edttxt.getText());
+                    } else {
+                        edttxt.setText("3.1415926535897932384626433832795028842"); // to 39 digits, as the display only supports up to 40 digits
+                        pi = true;
+                    }
+                }
             }
         }));
 
@@ -209,6 +420,9 @@ public class MainActivity extends AppCompatActivity {
                 val2 = 0;
                 dec = false; // reset decimal to no decimal
                 neg = false; // reset negative to false
+                eq = false; // reset equals to false
+                btn = false;
+                pi = false;
             }
         });
 
@@ -218,8 +432,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (dec) { // if there is already a decimal then continue on, user mistake
                     edttxt.setText(edttxt.getText());
-                    dec = true;
-                } else if (!dec) { // else, we see if there is input from the user already
+                } else { // else, we see if there is input from the user already
                     if (edttxt.getText().equals("")) {
                         edttxt.setText("0." + ""); // by default, a null edttxt means the user wants "0."
                     } else {
@@ -257,6 +470,8 @@ public class MainActivity extends AppCompatActivity {
                     edttxt.setText(null);
                     dec = false; // reset decimal boolean to false as we have a new number, val2
                     neg = false; // reset negative to false
+                    btn = false;
+                    pi = false;
                 }
             }
         });
@@ -273,6 +488,8 @@ public class MainActivity extends AppCompatActivity {
                     edttxt.setText(null);
                     dec = false; // reset decimal boolean to false as we have a new number, val2
                     neg = false; // reset negative to false
+                    btn = false;
+                    pi = false;
                 }
             }
         });
@@ -289,6 +506,8 @@ public class MainActivity extends AppCompatActivity {
                     edttxt.setText(null);
                     dec = false; // reset decimal boolean to false as we have a new number, val2
                     neg = false; // reset negative to false
+                    btn = false;
+                    pi = false;
                 }
             }
         });
@@ -305,6 +524,8 @@ public class MainActivity extends AppCompatActivity {
                     edttxt.setText(null);
                     dec = false; // reset decimal boolean to false as we have a new number, val2
                     neg = false; // reset negative to false
+                    btn = false;
+                    pi = false;
                 }
             }
         });
@@ -318,6 +539,9 @@ public class MainActivity extends AppCompatActivity {
                 dec = false; // reset decimal boolean to false
                 edttxt.setText(Math.sin(val1) + "");
                 neg = false; // reset negative to false
+                eq = true; // reset equaled to true
+                btn = false;
+                pi = false;
             }
         });
 
@@ -330,6 +554,9 @@ public class MainActivity extends AppCompatActivity {
                 dec = false; // reset decimal boolean to false
                 edttxt.setText(Math.cos(val1) + "");
                 neg = false; // reset negative to false
+                eq = true;
+                btn = false;
+                pi = false;
             }
         });
 
@@ -342,6 +569,9 @@ public class MainActivity extends AppCompatActivity {
                 dec = false; // reset decimal boolean to false
                 edttxt.setText(Math.tan(val1) + "");
                 neg = false; // reset negative to false
+                eq = true;
+                btn = false;
+                pi = false;
             }
         });
 
@@ -350,13 +580,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (neg) {
-                    edttxt.setText("Error 2");
+                    edttxt.setText("Error 3");
                 } else {
                     symView.setText("log");
                     val1 = Float.parseFloat(edttxt.getText() + "");
                     dec = false; // reset decimal boolean to false
                     edttxt.setText(Math.log10(val1) + "");
                     neg = false; // reset negative to false
+                    eq = true;
+                    btn = false;
+                    pi = false;
                 }
             }
         });
@@ -366,13 +599,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (neg) {
-                    edttxt.setText("Error 2");
+                    edttxt.setText("Error 3");
                 } else {
                     symView.setText("ln");
                     val1 = Float.parseFloat(edttxt.getText() + "");
                     dec = false; // reset decimal boolean to false
                     edttxt.setText(Math.log(val1) + "");
                     neg = false; // reset negative to false
+                    eq = true;
+                    btn = false;
+                    pi = false;
                 }
             }
         });
@@ -383,9 +619,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 symView.setText("√");
                 val1 = Float.parseFloat(edttxt.getText() + "");
-                dec = false; // reset decimal boolean to false
-                edttxt.setText(Math.sqrt(val1) + "");
-                neg = false; // reset negative to false
+                if (neg) {
+                    edttxt.setText("Error 2");
+                } else {
+                    dec = false; // reset decimal boolean to false
+                    edttxt.setText(Math.sqrt(val1) + "");
+                    neg = false; // reset negative to false
+                    eq = true;
+                    btn = false;
+                    pi = false;
+                }
             }
         });
 
@@ -406,6 +649,8 @@ public class MainActivity extends AppCompatActivity {
                     dec = false; // reset decimal boolean to false
                     edttxt.setText(null);
                     neg = false; // reset negative to false
+                    btn = false;
+                    pi = false;
                 }
             }
         });
@@ -424,6 +669,9 @@ public class MainActivity extends AppCompatActivity {
                 dec = false; // reset decimal boolean to false
                 edttxt.setText(val1 + "");
                 neg = false; // reset negative to false
+                eq = true;
+                btn = false;
+                pi = false;
             }
         });
 
@@ -439,20 +687,35 @@ public class MainActivity extends AppCompatActivity {
                         edttxt.setText("Error 1");
                     } else {
                         edttxt.setText(val1 / val2 + "");
+                        eq = true;
+                        btn = false;
+                        pi = false;
                     }
                 } else {
                     switch (sym) {
                         case "+":
                             edttxt.setText(val1 + val2 + "");
+                            eq = true;
+                            btn = false;
+                            pi = false;
                             break;
                         case "-":
                             edttxt.setText(val1 - val2 + "");
+                            eq = true;
+                            btn = false;
+                            pi = false;
                             break;
                         case "x":
                             edttxt.setText(val1 * val2 + "");
+                            eq = true;
+                            btn = false;
+                            pi = false;
                             break;
                         case "exp":
                             edttxt.setText(Math.pow(val1, val2) + "");
+                            eq = true;
+                            btn = false;
+                            pi = false;
                             break;
                         default:
                             break;
