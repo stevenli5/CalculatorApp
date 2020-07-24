@@ -5,10 +5,10 @@ A calculator app designed and programmed in Android Studio, as part of assignmen
 This calculator contains many new implementations compared to the initially commited version.
 
 #### Key Additions/Changes
-- New sin, cos, tan buttons
 - Dark Mode
 - User Manual
 - Completely redesigned user interface
+- New sin, cos, tan buttons
 - New log, ln, square root, exponential, and factorial buttons
 - New negative and pi buttons
 - New symbol viewer, to display what operation the user chose
@@ -22,7 +22,7 @@ Calculator layout can be found in /app/src/main/res/layout/activity_main.xml
 User Manual can be found in /app/src/main/res/layout/activity_user_manual.xml  
 
 Here is a basic unfinished state machine from Umple. Issues were ran into and so the final product was drawn out by hand.  
-![image](https://user-images.githubusercontent.com/60322211/88244459-f30f9480-cc61-11ea-8467-b629819d4a05.png)  
+![image](https://user-images.githubusercontent.com/60322211/88357497-73ed8f80-cd39-11ea-9d5a-3f69525f2635.png)
 ![image](https://user-images.githubusercontent.com/60322211/88244358-92805780-cc61-11ea-94c7-04eafdd6d638.png)  
 
 ### Future Implementations
