@@ -1,7 +1,7 @@
 # Calculator App
 
 #### Description
-A calculator app designed and programmed in Android Studio, as part of assignment 5 for the SEG2105 course at the University of Ottawa.  
+A calculator app designed and programmed in Android Studio, as part of an assignment for the Intro. to Software Engineering course at the University of Ottawa.  
 This calculator contains many new implementations compared to the initially commited version.
 
 #### Key Additions/Changes
