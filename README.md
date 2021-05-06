@@ -68,6 +68,6 @@ Press "Clear and Enable Dark Mode".
 Expected Result and Actual Result:  
 ![image](https://user-images.githubusercontent.com/60322211/88239628-ecc5ec00-cc52-11ea-9a1d-e12ece1b180b.png)
 
-### Credits
+### Sources
 Dark Mode: https://www.youtube.com/watch?v=QhGf8fGJM8U  
 Second Activity: https://codinginflow.com/tutorials/android/open-activity-on-button-click  
